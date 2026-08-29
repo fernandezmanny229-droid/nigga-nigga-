@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sorry na Asawa</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+    min-height: 100vh;
+    color: #5a2638;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.95);
+    width: 100%;
+    max-width: 550px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(120,40,70,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fade 0.7s ease;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+.heart {
+    font-size: 60px;
+    animation: heartbeat 1.3s infinite;
+    margin-bottom: 10px;
+}
+
+.photo {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ff9fbd;
+    display: block;
+    margin: 10px auto 20px auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+.love-video {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #ff6f9f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff4f89;
+}
+
+.signature {
+    margin-top: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.final {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<div class="page active" id="page1">
+
+    <div class="heart">🥺</div>
+
+    <h1>I'm Sorry Lalovee ko</h1>
+
+    <p>
+        Hi, <b>laloveee asawa at aking minamahal</b>...
+    </p>
+
+    <p>
+        Ginawa ko'tong code na'to para lang mag-sorry
+        sa'yo. Alam kong hindi ako masyadong magaling
+        mag-code kaya nagpatulong ako kay ChatGPT
+        para sa idea.
+    </p>
+
+    <button onclick="nextPage(2)">
+        Click mo'to kung mahal mo'ko 🙁
+    </button>
+
+</div>
+
+<div class="page" id="page2">
+
+    <img src="mahalkita.jpg" class="photo">
+
+    <h2>lalovee sorry napo</h2>
+
+    <p>
+        alam ko lalove may nagawa akong mali at alam ko rin sa sarili kong nagkulang ako lasi nga imbis na unahin kita inuna ko pa pag lalaro ko
+    </p>
+
+    <p>
+        Sana mapatawad mo ako, lalove ko
+    </p>
+
+    <button onclick="nextPage(3)">
+        pindutin mo kung love mo me
+    </button>
+
+</div>
+
+<div class="page" id="page3">
+
+    <div class="heart">🥺</div>
+
+    <h2>gusto koblang sabihin sa'yo na</h2>
+
+    <p>
+        sorry lalove sa laahat lahat ng gan'tong ginagawa ko sa'yo mahal kita
+    </p>
+
+    <p>
+        nag kamali ako oo pero sana mapatawad mo ako at sana maitama ko yung mga wrong doings ko
+    </p>
+
+    <p>
+        I'll do my best to become better for you.
+        hindi man ngayon agad pero uunti untiin konpara sa'yo sorry talaga lalove ko
+    </p>
+
+    <button onclick="nextPage(4)">
+        isa pa dalii
+    </button>
+
+</div>
+
+<div class="page" id="page4">
+
+    <div class="heart">🫶</div>
+
+    <h2>pinapangako ko</h2>
+
+    <p>
+        na hindi na ito mauulit sana mapatawad mo ako miss na miss na kita lalove ko anicca gene maldonado
+    </p>
+
+    <p>
+        love na love ko yang lalaove ko ma yan eh
+    </p>
+
+    <button onclick="nextPage(5)">
+        sige pa
+    </button>
+
+</div>
+
+<div class="page" id="page5">
+
+    <div class="heart">💗</div>
+
+    <h1>okay naba tayo?</h1>
+
+    <p>
+        okay lang kung hindi naiintindihan ko
+    </p>
+
+    <p>
+        pero sana mapatawad mo pa me
+    </p>
+
+    <button onclick="forgive()">
+        oo, syempre love kita eh
+    </button>
+
+    <button onclick="nope()">
+        hindi muna
+    </button>
+
+    <p id="answer"></p>
+
+</div>
+
+<div class="page" id="page6">
+
+    <div class="heart">❤️</div>
+
+    <h1>salamat lalove iloveyousomuch</h1>
+
+    <p>
+        salamat sa effort na buksan mo'to
+    </p>
+
+    <p>
+        sa lahat ng nang yari sana mapa tawad mo'ko
+    </p>
+
+    <p class="final">
+        mahal kita mahal na mahal
+    </p>
+
+    <p class="signature">
+        — Ding your boyfriend pogi
+    </p>
+
+    <h2 style="margin-top:30px;">
+        Para sa'yo, lalove
+    </h2>
+
+    <p>
+        May gusto pa akong ipakita sa'yo...
+    </p>
+
+    <video class="love-video" controls playsinline>
+        <source src="1000019238.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+function nextPage(number) {
+
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number)
+        .classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+
+function forgive() {
+
+    document.getElementById("answer").innerHTML =
+        "thank you laloveeeee kasi napatawad mo me iloveyousomuch";
+
+    setTimeout(function() {
+        nextPage(6);
+    }, 1800);
+}
+
+function nope() {
+
+    document.getElementById("answer").innerHTML =
+        "okidokiiiiiii lang naiintindihan ko kung di mo pa me bati sa ngayon";
+}
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💓",
+        "🩷"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
